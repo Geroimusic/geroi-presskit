@@ -594,7 +594,7 @@ max-width: none;
 .on-stage {
     width: 100%;
     max-width: 1050px;
-    margin: 100px auto 0;
+    margin: 100px 0 0;
     padding: 0 30px 100px;
     box-sizing: border-box;
 }
