@@ -263,25 +263,26 @@ p {
 }
 
 .about-section h2{
-    font-size:42px;
-    margin-bottom:28px;
+    font-size:38px;
+    margin-bottom:18px;
 }
 
 .about-section p{
-    line-height:1.9;
+    line-height:1.55;
     color:#efefef;
-    letter-spacing:1px;
-    margin-bottom:22px;
+    letter-spacing:0.3px;
+    margin-bottom:14px;
     font-weight:400;
+    font-size:17px;
 }
 
 .about-lead{
-    font-size:22px;
+    font-size:18px;
     color:#fff;
 }
 
 .about-closing{
-    font-size:20px;
+    font-size:17px;
     color:#fff;
     font-weight:500;
 }
@@ -292,24 +293,24 @@ p {
 }
 @media (max-width: 600px) {
 
-    .about-section {
-        width: 100%;
-        max-width: none;
-        box-sizing: border-box;
-        padding-left: 22px;
-        padding-right: 22px;
-        margin-left: 0;
-        margin-right: 0;
-    }
+  .about-section {
+    width: calc(100vw - 32px);
+    max-width: none;
+    box-sizing: border-box;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-left: 0;
+    padding-right: 0;
+}
 
     .about-section p {
-        width: 100%;
-        max-width: none;
-        font-size: 17px;
-        line-height: 1.65;
-        letter-spacing: 0;
-        text-align: left;
-    }
+    width: 100%;
+    max-width: none;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    text-align: left;
+}
 
     .about-lead {
         font-size: 18px;
