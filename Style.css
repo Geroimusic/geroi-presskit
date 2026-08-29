@@ -957,3 +957,41 @@ html {
         letter-spacing: 0 !important;
     }
 }
+@media (max-width: 600px) {
+
+    .contenido {
+        max-width: none !important;
+        width: 100% !important;
+        padding-left: 22px !important;
+        padding-right: 22px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+        align-items: stretch !important;
+    }
+
+    .about-section {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .about-section p,
+    .about-lead,
+    .about-closing {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        font-size: 16px !important;
+        line-height: 1.55 !important;
+        letter-spacing: 0 !important;
+        text-align: left !important;
+    }
+}
