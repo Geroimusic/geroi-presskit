@@ -909,3 +909,19 @@ html {
 .main-nav a:hover {
     background: rgba(255, 255, 255, 0.14);
 }
+@media (max-width: 600px) {
+    .about-section {
+        width: calc(100vw - 32px) !important;
+        max-width: calc(100vw - 32px) !important;
+        margin-left: 16px !important;
+        margin-right: 16px !important;
+        padding: 0 !important;
+    }
+
+    .about-section p {
+        width: 100% !important;
+        max-width: 100% !important;
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+    }
+}
