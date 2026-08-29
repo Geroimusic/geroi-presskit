@@ -1,0 +1,877 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contenido {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 120px 40px 120px 120px;
+    color: white;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 75px;
+    letter-spacing: 20px;
+    margin: 0 0 25px 0;
+}
+
+p {
+    font-size: 24px;
+    letter-spacing: 5px;
+    margin: 0;
+   font-size: 19px;
+}
+
+.biography {
+  max-width: 620px;
+}
+
+.featured-supports {
+  width: 100%;
+  margin-top: 85px;
+  padding-bottom: 120px;
+}
+}
+
+.section-number {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.featured-supports h2 {
+  font-size: 32px;
+  letter-spacing: 1px;
+  margin: 0 0 50px 0;
+}
+
+.supports-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 45px 60px;
+}
+
+.support-card h3 {
+  font-size: 18px;
+  margin: 0 0 12px 0;
+}
+
+.support-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  margin: 0;
+  opacity: 0.8;
+}
+/* ==========================
+   MUSIC SECTION
+========================== */
+
+.music-section {
+    width: 100%;
+    padding: 0 0 120px;
+    text-align: left;
+}
+
+.music-section h2 {
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin: 0 0 12px;
+}
+
+.section-subtitle {
+    color: #bdbdbd;
+    max-width: 700px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 0 0 40px;
+    line-height: 1.6;
+}
+
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    width: 100%;
+}
+
+.music-card {
+    background: rgba(16, 16, 16, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 18px;
+    padding: 35px 25px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.music-card:hover {
+    transform: translateY(-8px);
+    border-color: #ffffff;
+}
+
+.music-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.music-card p {
+    color: #bdbdbd;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+.music-card span {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.music-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.music-header img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+
+    filter: brightness(0) invert(1);
+    opacity: .9;
+
+    transition:
+        transform .35s ease,
+        filter .35s ease,
+        opacity .35s ease;
+}
+.music-card:hover .music-header img {
+    transform: scale(1.15);
+    opacity: 1;
+    filter: brightness(0) invert(1);
+}
+
+.music-card h3 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.music-card span {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* ==========================
+   RELEASES SECTION
+========================== */
+
+.selected-releases {
+    width: 100%;
+    padding-bottom: 120px;
+}
+
+.selected-releases h2 {
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin: 0 0 38px;
+}
+
+.releases-grid {
+    display: grid;
+   grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+ .release-featured {
+    grid-column: 1 / -1;
+}.release-card {
+ 
+    background: rgba(17, 17, 17, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 18px;
+    padding: 28px 24px;
+}
+
+.release-card h3 {
+ 
+    margin: 0 0 12px;
+    font-size: 20px;
+}
+
+.release-subtitle {
+    font-size: 14px;
+    letter-spacing: 2px;
+   .release-subtitle {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #c7c7c7;
+    margin-bottom: 18px;
+}
+    color: #c7c7c7;
+    margin-bottom: 18px;
+}
+
+.track {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin: 0 0 6px;
+    line-height: 1.6;
+}
+
+.release-card span {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #a7a7a7;
+    margin: 0 0 18px;
+}
+.hero-subtitle {
+    margin-bottom: 34px;
+}
+.hero-subtitle {
+    margin-bottom: 34px;
+}
+
+.about-section{
+    max-width:720px;
+}
+
+.about-section h2{
+    font-size:42px;
+    margin-bottom:28px;
+}
+
+.about-section p{
+    line-height:1.9;
+    color:#efefef;
+    letter-spacing:1px;
+    margin-bottom:22px;
+    font-weight:400;
+}
+
+.about-lead{
+    font-size:22px;
+    color:#fff;
+}
+
+.about-closing{
+    font-size:20px;
+    color:#fff;
+    font-weight:500;
+}
+
+.about-section strong{
+    color:#fff;
+    font-weight:800;
+}
+/* ======================================
+   EDITORIAL SECTION TITLES
+====================================== */
+
+.section-title{
+    margin-bottom:32px;
+}
+
+.section-number{
+    display:block;
+    font-size:13px;
+    letter-spacing:4px;
+    color:rgba(255,255,255,.45);
+    font-weight:700;
+    margin-bottom:10px;
+    text-transform:uppercase;
+}
+
+.section-title h2{
+    margin:0;
+    font-size:42px;
+    line-height:1;
+    font-weight:800;
+    color:#fff;
+}
+/* ===== STACEY FEATURED CARD ===== */
+
+/* ==========================
+   FEATURED SUPPORT PHOTO CARDS
+========================== */
+
+.support-photo-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
+  border-radius: 18px;
+  isolation: isolate;
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+}
+
+/* FOTOS */
+.support-video {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  opacity: 0;
+  z-index: 1;
+
+  transition: opacity .35s ease;
+}
+
+.stacey-card {
+  --card-image: url("Images/stacey-pullen.jpg");
+}
+
+.miguel-card {
+  --card-image: url("Images/miguel-bastida.PNG");
+}
+
+.archie-card {
+  --card-image: url("Images/Archie-hamilton.JPG");
+}
+
+.daniel-card {
+  --card-image: url("Images/daniel-orpi.PNG");
+}
+.francis-card {
+    --card-image: url("Images/francis-geroi.jpg");
+}
+
+.francis-card::before {
+    filter: grayscale(100%) brightness(100%) contrast(110%) !important;
+}
+
+/* IMAGEN DE FONDO */
+
+.support-photo-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background-image: var(--card-image);
+  background-size: cover;
+  background-position: center;
+
+ filter: grayscale(100%) brightness(35%) contrast(110%);
+  transform: scale(1.02);
+
+  transition:
+    filter .35s ease,
+    transform .35s ease;
+}
+
+/* HOVER DE LA FOTO */
+
+.support-photo-card:hover::before {
+    filter: grayscale(0%) brightness(55%) contrast(115%);
+    transform: scale(1.06);
+}
+}
+}
+
+/* CAPA OSCURA */
+
+.support-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, .90),
+    rgba(0, 0, 0, .38),
+    rgba(0, 0, 0, .10)
+  );
+}
+
+/* TEXTO */
+
+.support-content {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  z-index: 2;
+}
+
+/* MOVIMIENTO AL PASAR EL CURSOR */
+
+.support-photo-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, .30);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, .45);
+}
+.support-content h3,
+.support-content p {
+  transition: transform .35s ease, opacity .35s ease, color .35s ease;
+}
+
+.support-photo-card:hover .support-content h3 {
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.support-photo-card:hover .support-content p {
+  opacity: 1;
+}
+/* ==========================
+   VIDEOS EN FEATURED SUPPORTS
+========================== */
+
+.support-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity .35s ease;
+}
+
+/* La foto desaparece al pasar el mouse */
+.support-photo-card:hover::before {
+    opacity: 0;
+}
+
+/* El video aparece */
+.support-photo-card:hover .support-video {
+    opacity: 1;
+}
+
+/* Mantener la imagen mientras no hay hover */
+.support-photo-card::before {
+    transition: opacity .35s ease;
+}
+
+/* Segundo video de Archie oculto */
+.archie-video-2 {
+    display: none;
+}
+/* VIDEO HOVER PREMIUM */
+
+.support-video {
+  transform: scale(1.01);
+  transition:
+    opacity .45s ease,
+    transform .6s ease,
+    filter .45s ease;
+}
+
+.support-photo-card:hover .support-video {
+  opacity: 1;
+  transform: scale(1.04);
+  filter: brightness(1.05);
+}
+
+.support-photo-card:hover .support-content {
+  transform: translateY(-4px);
+}
+
+.support-content {
+  transition: transform .35s ease;
+}
+/* ==========================================
+   05 / PLAYED AT
+========================================== */
+
+.played-at{
+    width:100%;
+    padding:120px 0;
+}
+
+.played-at-wall{
+
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:18px 22px;
+
+    margin-top:50px;
+    margin-bottom:90px;
+
+    line-height:1.2;
+}
+
+.played-at-wall span{
+
+    cursor:pointer;
+
+    color:#b5b5b5;
+
+    transition:
+        transform .35s ease,
+        color .35s ease,
+        opacity .35s ease;
+
+    display:inline-block;
+}
+
+/* Nivel 1 */
+
+.level-1{
+    font-size:38px;
+    font-weight:800;
+    color:#ffffff;
+}
+
+.level-2{
+    font-size:28px;
+    font-weight:700;
+    color:#cfcfcf;
+}
+
+.level-3{
+    font-size:20px;
+    font-weight:600;
+    color:#9f9f9f;
+}
+
+/* Hover */
+
+.played-at-wall:hover span{
+
+    opacity:.25;
+}
+
+.played-at-wall span:hover{
+
+    opacity:1;
+
+    color:#fff;
+
+    transform:scale(1.12);
+
+    letter-spacing:1px;
+}
+
+.live-highlights-title{
+
+    margin-top:40px;
+}
+
+.live-highlights-title h3{
+
+    font-size:32px;
+
+    letter-spacing:1px;
+
+    margin:0;
+}
+/* =========================
+   ON STAGE
+========================= */
+
+.on-stage {
+    width: 100%;
+    max-width: 1050px;
+    margin: 100px auto 0;
+    padding: 0 30px 100px;
+    box-sizing: border-box;
+}
+
+.on-stage-header {
+    margin-bottom: 28px;
+}
+
+.on-stage-header h2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+/* GALERÍA */
+
+.on-stage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.on-stage-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #080808;
+}
+
+.on-stage-item img,
+.on-stage-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* FOTO / VIDEO */
+
+.on-stage-item img,
+.on-stage-item video {
+    filter: grayscale(100%);
+    transition:
+        filter 0.4s ease,
+        transform 0.5s ease;
+}
+
+.on-stage-item:hover img,
+.on-stage-item:hover video {
+    filter: grayscale(0%);
+    transform: scale(1.025);
+}
+
+/* TEXTO */
+
+.on-stage-info {
+    position: absolute;
+    left: 20px;
+    bottom: 18px;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: all 0.3s ease;
+}
+
+.on-stage-item:hover .on-stage-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.on-stage-info h3 {
+    margin: 0 0 4px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.on-stage-info span {
+    color: #ccc;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+/* OSCURECER PARTE INFERIOR AL HACER HOVER */
+
+.on-stage-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,.65) 0%,
+        rgba(0,0,0,0) 45%
+    );
+    opacity: 0;
+    transition: opacity .3s ease;
+    pointer-events: none;
+}
+
+.on-stage-item:hover::after {
+    opacity: 1;
+}
+
+/* RECAP FINAL */
+
+.on-stage-recap {
+    grid-column: span 2;
+    aspect-ratio: 16 / 9;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .on-stage-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .on-stage {
+        padding-left: 18px;
+        padding-right: 18px;
+        margin-top: 80px;
+    }
+
+    .on-stage-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .on-stage-item {
+    aspect-ratio: 4 / 3;
+}
+
+    .on-stage-recap {
+        grid-column: span 1;
+        aspect-ratio: 16 / 9;
+    }
+
+    .on-stage-info {
+        opacity: 1;
+        transform: none;
+    }
+}.on-stage {
+    position: relative;
+    z-index: 1;
+    isolation: isolate;
+}
+
+.on-stage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background: #000;
+    z-index: -1;
+}
+
+/* NOMBRE VISIBLE EN TODOS LOS REGISTROS */
+.on-stage-item .on-stage-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* =========================
+   BOOKING / CONTACT
+========================= */
+
+.booking-contact {
+    width: 100%;
+    background: #000;
+    padding: 140px 30px 160px;
+    box-sizing: border-box;
+}
+
+.booking-contact-inner {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.booking-contact h2 {
+    margin: 0 0 24px;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.booking-contact-text {
+    margin: 0 0 38px;
+    color: #9f9f9f;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.booking-contact-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.booking-contact-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    padding-bottom: 5px;
+    transition: opacity .25s ease, border-color .25s ease;
+}
+
+.booking-contact-links a:hover {
+    opacity: .6;
+    border-color: #fff;
+}
+
+@media (max-width: 600px) {
+    .booking-contact {
+        padding: 100px 18px 120px;
+    }
+
+    .booking-contact-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
+
+/* NAVEGACION PRINCIPAL */
+html {
+    scroll-behavior: smooth;
+}
+
+.main-nav {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 72px;
+    background: rgba(0, 0, 0, 0.96);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: opacity 0.25s ease, background 0.25s ease;
+}
+
+.main-nav a:hover {
+    background: rgba(255, 255, 255, 0.14);
+}
