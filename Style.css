@@ -894,3 +894,29 @@ html {
 .main-nav a:hover {
     background: rgba(255, 255, 255, 0.14);
 }
+/* FIX BIOGRAPHY MOBILE */
+@media (max-width: 600px) {
+
+  .about-section {
+    width: auto !important;
+    max-width: none !important;
+    margin-left: 24px !important;
+    margin-right: 24px !important;
+  }
+
+  .about-section p {
+    width: 100% !important;
+    max-width: none !important;
+    font-size: 18px !important;
+    line-height: 1.65 !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .about-lead {
+    font-size: 20px !important;
+  }
+
+  .about-closing {
+    font-size: 18px !important;
+  }
+}
