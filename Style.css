@@ -871,24 +871,24 @@ html {
     background: rgba(255, 255, 255, 0.14);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .main-nav {
         position: sticky;
         top: 0;
         z-index: 9999;
-        min-height: 160px !important;
+        min-height: 70px;
         gap: 0;
         justify-content: space-around;
-        padding: 26px 6px 0;
+        padding: 8px 4px;
         background: rgba(0, 0, 0, 0.96);
     }
 
     .main-nav a {
-        font-size: 22px !important;
-        letter-spacing: 0.8px;
-        padding: 8px 4px;
+        font-size: 10px;
+        letter-spacing: 0.5px;
+        padding: 8px 2px;
         text-align: center;
-        white-space: normal;
+        white-space: nowrap;
     }
 }
 @media (max-width: 600px) {
