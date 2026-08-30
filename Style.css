@@ -981,3 +981,28 @@ html {
         overflow-x: hidden;
     }
 }
+@media (max-width: 600px) {
+    .main-nav {
+        gap: 0;
+        justify-content: space-around;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .main-nav a {
+        font-size: 11px;
+        letter-spacing: 0.8px;
+        padding: 10px 5px;
+    }
+}
+@media (max-width: 600px) {
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    img,
+    video {
+        max-width: 100%;
+    }
+}
