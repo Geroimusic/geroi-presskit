@@ -1006,3 +1006,30 @@ html {
         max-width: 100%;
     }
 }
+@media (max-width: 600px) {
+    .music-header {
+        gap: 8px;
+        min-width: 0;
+    }
+
+    .music-header img {
+        width: 42px;
+        height: 42px;
+        flex-shrink: 0;
+    }
+
+    .music-card h3 {
+        font-size: 19px;
+        line-height: 1.1;
+        min-width: 0;
+    }
+}
+@media (max-width: 600px) {
+    .on-stage {
+        padding-bottom: 50px !important;
+    }
+
+    .booking-contact {
+        padding-top: 60px !important;
+    }
+}
