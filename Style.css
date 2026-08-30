@@ -841,11 +841,13 @@ html {
 }
 
 .main-nav {
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 9999;
+    left: 0;
+    right: 0;
     width: 100%;
-    min-height: 78px;
+    z-index: 9999;
+    min-height: 70px;
     background: rgba(0, 0, 0, 0.96);
     display: flex;
     justify-content: center;
