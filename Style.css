@@ -876,15 +876,15 @@ html {
         position: sticky;
         top: 0;
         z-index: 9999;
-        min-height: 92px;
+        min-height: 100px;
         gap: 0;
         justify-content: space-around;
-        padding: 22px 6px 0;
+        padding: 26px 6px 0;
         background: rgba(0, 0, 0, 0.96);
     }
 
     .main-nav a {
-        font-size: 14px;
+        font-size: 15px;
         letter-spacing: 0.8px;
         padding: 8px 4px;
         text-align: center;
