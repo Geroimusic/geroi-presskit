@@ -1538,10 +1538,17 @@ html {
 }
 /* SUPPORTS DESKTOP - SQUARE CARDS */
 
+/* SUPPORTS DESKTOP - SQUARE CARDS FINAL */
+
 @media (min-width: 901px) {
-    .support-photo-card {
+    .supports-grid .support-photo-card {
+        width: 100% !important;
         height: auto !important;
         min-height: 0 !important;
         aspect-ratio: 1 / 1 !important;
+    }
+
+    .supports-grid {
+        align-items: start !important;
     }
 }
