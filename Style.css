@@ -356,14 +356,14 @@ max-width: none;
 }
 
 .archie-card {
-  --card-image: url("Images/Archie-hamilton.JPG");
+--card-image: url("Images/archie-hamilton.JPG");
 }
 
 .daniel-card {
   --card-image: url("Images/daniel-orpi.PNG");
 }
 .francis-card {
-    --card-image: url("Images/francis-geroi.jpg");
+    --card-image: url("Images/francis-geroi.PNG");
 }
 
 .francis-card::before {
