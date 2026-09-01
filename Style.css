@@ -1224,3 +1224,27 @@ html {
         padding-top: 55px !important;
     }
 }
+/* ===== DESKTOP ALIGNMENT FINAL ===== */
+
+@media (min-width: 901px) {
+
+    .rider-setup {
+        width: calc(100% - 80px) !important;
+        max-width: 1400px !important;
+        margin: 0 auto !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .booking-contact {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+    }
+
+    .booking-contact-inner {
+        width: calc(100% - 80px) !important;
+        max-width: 1400px !important;
+        margin: 0 auto !important;
+    }
+}
