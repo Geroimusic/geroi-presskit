@@ -1523,3 +1523,13 @@ git push
         filter: grayscale(100%) brightness(100%) contrast(105%) !important;
     }
 }
+/* SUPPORTS MOBILE - ARCHIE + DANIEL */
+
+@media (max-width: 600px) {
+
+    .archie-card::before,
+    .daniel-card::before {
+        filter: grayscale(100%) brightness(80%) contrast(120%) !important;
+    }
+
+}
