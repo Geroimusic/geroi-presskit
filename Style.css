@@ -1248,3 +1248,249 @@ html {
         margin: 0 auto !important;
     }
 }
+/* ===== RIDER + BOOKING DESKTOP ALIGNMENT ===== */
+@media (min-width: 901px) {
+
+    .rider-setup,
+    .booking-contact-inner {
+        width: calc(100% - 80px) !important;
+        max-width: 1400px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box !important;
+    }
+
+    .rider-setup {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+git add .
+git commit -m "Force desktop content alignment"
+git push
+
+/* ===== SUPPORTS MOBILE ===== */
+
+@media (max-width: 600px) {
+
+    .support-photo-card::before {
+        filter: grayscale(100%) brightness(55%) contrast(110%) !important;
+        opacity: 1 !important;
+    }
+
+    .support-photo-card .support-video {
+        opacity: 0 !important;
+    }
+
+    .support-photo-card.support-active::before {
+        opacity: 0 !important;
+    }
+
+    .support-photo-card.support-active .support-video {
+        opacity: 1 !important;
+        filter: grayscale(0%) !important;
+    }
+
+    .support-photo-card {
+        transform: none !important;
+    }
+}
+/* ==========================================
+   SUPPORTS MOBILE FINAL
+========================================== */
+
+@media (max-width: 600px) {
+
+    .support-photo-card::before {
+        filter: grayscale(100%) brightness(55%) contrast(110%) !important;
+        opacity: 1 !important;
+    }
+
+    .support-photo-card .support-video {
+        opacity: 0 !important;
+    }
+
+    .support-photo-card.support-active::before {
+        opacity: 0 !important;
+    }
+
+    .support-photo-card.support-active .support-video {
+        opacity: 1 !important;
+        filter: grayscale(0%) !important;
+    }
+
+    .support-photo-card {
+        transform: none !important;
+    }
+}
+
+
+/* ==========================================
+   ON STAGE FINAL
+========================================== */
+
+.featured-shows-title,
+.more-moments-title {
+    margin: 35px 0 25px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,.18);
+}
+
+.featured-shows-title span,
+.more-moments-title span {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #888;
+}
+
+
+/* FEATURED SHOWS */
+
+.featured-show {
+    margin-bottom: 55px;
+}
+
+.featured-show h3 {
+    margin: 0 0 15px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    color: #fff;
+}
+
+.featured-show-media {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.featured-stage-photo,
+.featured-stage-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #080808;
+}
+
+.featured-stage-photo img,
+.featured-stage-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.featured-stage-photo img {
+    filter: grayscale(0%);
+}
+
+.featured-stage-video video {
+    filter: grayscale(100%);
+    transition:
+        filter .35s ease,
+        transform .45s ease;
+}
+
+.featured-stage-video:hover video {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+
+/* MORE MOMENTS */
+
+.more-moments-title {
+    margin-top: 70px;
+}
+
+.more-moments-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.more-moment {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #080808;
+}
+
+.more-moment img,
+.more-moment video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%);
+    transition:
+        filter .35s ease,
+        transform .35s ease;
+}
+
+.more-moment:hover img,
+.more-moment:hover video {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+.more-moment > span {
+    position: absolute;
+    left: 14px;
+    bottom: 12px;
+    z-index: 3;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-shadow: 0 2px 8px #000;
+    pointer-events: none;
+}
+
+
+/* ==========================================
+   ON STAGE MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .featured-shows-title,
+    .more-moments-title {
+        margin-top: 28px;
+        margin-bottom: 18px;
+    }
+
+    .featured-show {
+        margin-bottom: 38px;
+    }
+
+    .featured-show h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .featured-show-media {
+        grid-template-columns: 1fr 1fr;
+        gap: 7px;
+    }
+
+    .featured-stage-photo,
+    .featured-stage-video {
+        aspect-ratio: 4 / 5;
+    }
+
+    .more-moments-title {
+        margin-top: 50px;
+    }
+
+    .more-moments-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7px;
+    }
+
+    .more-moment {
+        aspect-ratio: 1 / 1;
+    }
+}
