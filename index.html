@@ -584,11 +584,25 @@ document.querySelectorAll(".support-photo-card").forEach(card => {
         }
     }
 
-    card.addEventListener("mouseenter", playSupport);
-    card.addEventListener("mouseleave", stopSupport);
+    /* COMPUTADOR: pasar el mouse */
+    card.addEventListener("mouseenter", () => {
+        if (window.matchMedia("(hover: hover)").matches) {
+            playSupport();
+        }
+    });
 
+    card.addEventListener("mouseleave", () => {
+        if (window.matchMedia("(hover: hover)").matches) {
+            stopSupport();
+        }
+    });
+
+    /* CELULAR / TOUCH: un solo toque */
     card.addEventListener("click", () => {
-        const isActive = card.classList.contains("support-active");
+
+        if (window.matchMedia("(hover: hover)").matches) {
+            return;
+        }
 
         document.querySelectorAll(".support-photo-card").forEach(otherCard => {
             if (otherCard !== card) {
@@ -601,11 +615,7 @@ document.querySelectorAll(".support-photo-card").forEach(card => {
             }
         });
 
-        if (isActive) {
-            stopSupport();
-        } else {
-            playSupport();
-        }
+        playSupport();
     });
 
 });
