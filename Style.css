@@ -1265,9 +1265,6 @@ html {
         padding-right: 0 !important;
     }
 }
-git add .
-git commit -m "Force desktop content alignment"
-git push
 
 /* ===== SUPPORTS MOBILE ===== */
 
@@ -1532,4 +1529,19 @@ git push
         filter: grayscale(100%) brightness(80%) contrast(120%) !important;
     }
 
+}
+@media (max-width: 600px) {
+    .archie-card::before {
+        background-position: 60% center !important;
+        filter: grayscale(100%) brightness(100%) contrast(125%) !important;
+    }
+}
+/* SUPPORTS DESKTOP - SQUARE CARDS */
+
+@media (min-width: 901px) {
+    .support-photo-card {
+        height: auto !important;
+        min-height: 0 !important;
+        aspect-ratio: 1 / 1 !important;
+    }
 }
