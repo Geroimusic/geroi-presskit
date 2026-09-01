@@ -1051,3 +1051,176 @@ html {
         padding-top: 60px !important;
     }
 }
+/* ==========================================
+   FINAL LAYOUT ADJUSTMENTS
+========================================== */
+
+/* MENOS ESPACIO ENTRE SECCIONES */
+
+.featured-supports,
+.music-section,
+.selected-releases {
+    padding-bottom: 80px !important;
+}
+
+.played-at {
+    padding: 80px 0 !important;
+}
+
+.on-stage {
+    margin-top: 60px !important;
+    padding-bottom: 70px !important;
+}
+
+
+/* UPCOMING RELEASES */
+
+.upcoming-releases {
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+.upcoming-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.upcoming-card {
+    background: rgba(17,17,17,.72);
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 18px;
+    padding: 26px 24px;
+}
+
+.upcoming-card span {
+    display: block;
+    color: #888;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.upcoming-card h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.upcoming-card p {
+    margin: 0;
+    color: #ccc;
+    font-size: 15px;
+    letter-spacing: .5px;
+}
+
+
+/* RIDER / SETUP */
+
+.rider-setup {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 20px 30px 80px;
+    box-sizing: border-box;
+}
+
+.rider-header {
+    margin-bottom: 28px;
+}
+
+.rider-header > span {
+    color: #777;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.rider-header h2 {
+    margin: 8px 0 0;
+    font-size: 32px;
+    color: #fff;
+}
+
+.rider-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border-top: 1px solid rgba(255,255,255,.18);
+    border-bottom: 1px solid rgba(255,255,255,.18);
+}
+
+.rider-grid > div {
+    padding: 22px 16px;
+    border-right: 1px solid rgba(255,255,255,.12);
+}
+
+.rider-grid > div:last-child {
+    border-right: 0;
+}
+
+.rider-grid span {
+    display: block;
+    color: #777;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    margin-bottom: 9px;
+}
+
+.rider-grid strong {
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+
+/* BOOKING MÁS CERCA DEL CONTENIDO ANTERIOR */
+
+.booking-contact {
+    padding-top: 70px !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .featured-supports,
+    .music-section,
+    .selected-releases,
+    .upcoming-releases {
+        padding-bottom: 60px !important;
+    }
+
+    .played-at {
+        padding: 60px 0 !important;
+    }
+
+    .on-stage {
+        margin-top: 40px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .upcoming-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .upcoming-card {
+        padding: 20px;
+    }
+
+    .rider-setup {
+        padding: 20px 18px 55px;
+    }
+
+    .rider-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .rider-grid > div {
+        border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+
+    .booking-contact {
+        padding-top: 55px !important;
+    }
+}
