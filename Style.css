@@ -1501,3 +1501,25 @@ git push
         object-position: center 65% !important;
     }
 }
+/* STACEY SUPPORT - BRIGHTER PHOTO */
+
+.stacey-card::before {
+    filter: grayscale(100%) brightness(115%) contrast(95%) !important;
+}
+
+.stacey-card:hover::before {
+    filter: grayscale(0%) brightness(115%) contrast(95%) !important;
+}
+
+@media (max-width: 600px) {
+    .stacey-card::before {
+        filter: grayscale(100%) brightness(115%) contrast(95%) !important;
+    }
+}
+/* FRANCIS SUPPORT - BRIGHTER ON MOBILE */
+
+@media (max-width: 600px) {
+    .francis-card::before {
+        filter: grayscale(100%) brightness(100%) contrast(105%) !important;
+    }
+}
