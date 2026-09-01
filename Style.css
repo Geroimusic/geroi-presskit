@@ -1494,3 +1494,10 @@ git push
         aspect-ratio: 1 / 1;
     }
 }
+/* LA FERIA PHOTO - DESKTOP POSITION */
+
+@media (min-width: 901px) {
+    .featured-show:first-child .featured-stage-photo img {
+        object-position: center 65% !important;
+    }
+}
