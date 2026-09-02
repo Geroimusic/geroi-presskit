@@ -1592,3 +1592,11 @@ html {
 section[id] {
     scroll-margin-top: 110px;
 }
+/* STACEY RIGHT NOW - CHILITASTE */
+.stacey-right-now-card {
+    --card-image: url("Images/stacey-right-now.jpg");
+}
+
+.stacey-right-now-card .support-video {
+    object-position: center 70% !important;
+}
