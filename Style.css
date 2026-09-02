@@ -332,19 +332,22 @@ max-width: none;
 
 /* FOTOS */
 .support-video {
-  position: absolute;
-  inset: 0;
+    position: absolute;
+    inset: 0;
 
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 
-  object-fit: cover;
-  object-position: center;
+    object-fit: cover;
+    object-position: center;
 
-  opacity: 0;
-  z-index: 1;
+    border-radius: inherit;
+    background: transparent;
 
-  transition: opacity .35s ease;
+    opacity: 0;
+    z-index: 1;
+
+    transition: opacity .35s ease;
 }
 
 .stacey-card {

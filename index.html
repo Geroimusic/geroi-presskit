@@ -92,11 +92,11 @@
 
 
     <article class="support-card support-photo-card archie-card">
-      <video class="support-video archie-video-1" muted playsinline preload="metadata">
+      <video class="support-video archie-video-1" muted playsinline preload="auto">
         <source src="Videos/archie1.mp4" type="video/mp4">
       </video>
 
-      <video class="support-video archie-video-2" muted playsinline preload="metadata">
+      <video class="support-video archie-video-2" muted playsinline preload="auto">
         <source src="Videos/archie2.mp4" type="video/mp4">
       </video>
 
@@ -110,7 +110,7 @@
 
 
     <article class="support-card support-photo-card daniel-card">
-      <video class="support-video" muted playsinline preload="metadata">
+      <video class="support-video" muted playsinline preload="auto">
         <source src="Videos/daniel.mp4" type="video/mp4">
       </video>
 
@@ -124,7 +124,7 @@
 
 
     <article class="support-card support-photo-card francis-card">
-      <video class="support-video" muted playsinline preload="metadata">
+      <video class="support-video" muted playsinline preload="auto">
         <source src="Videos/francis.mp4" type="video/mp4">
       </video>
 
@@ -597,11 +597,9 @@ videos[1].play().catch(() => {});
     }
 
     /* COMPUTADOR: pasar el mouse */
-    card.addEventListener("mouseenter", () => {
-        if (window.matchMedia("(hover: hover)").matches) {
-            playSupport();
-        }
-    });
+card.addEventListener("mouseenter", () => {
+    playSupport();
+});
 
     card.addEventListener("mouseleave", () => {
         if (window.matchMedia("(hover: hover)").matches) {
