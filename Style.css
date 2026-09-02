@@ -1571,3 +1571,17 @@ html {
 .featured-stage-video video {
     object-position: center 60% !important;
 }
+/* INDIVIDUAL VIDEO FRAMING - DESKTOP ONLY */
+@media (min-width: 901px) {
+
+    /* LA FERIA */
+    .featured-show:nth-of-type(1) .featured-stage-video video {
+        object-position: center 72% !important;
+    }
+
+    /* SUBTERRANEO */
+    .featured-show:nth-of-type(4) .featured-stage-video video {
+        object-position: center 82% !important;
+    }
+
+}
