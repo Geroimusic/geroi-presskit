@@ -64,15 +64,19 @@
   <div class="supports-grid">
 
     <article class="support-card support-photo-card stacey-card">
-      <video class="support-video" muted playsinline preload="metadata">
-        <source src="Videos/stacey.mp4" type="video/mp4">
-      </video>
+    <video class="support-video stacey-video-1" muted playsinline preload="auto">
+    <source src="Videos/stacey.mp4" type="video/mp4">
+</video>
+
+<video class="support-video stacey-video-2" muted playsinline preload="auto" style="display:none;">
+    <source src="Videos/stacey-right-now.mp4" type="video/mp4">
+</video>
 
       <div class="support-overlay"></div>
 
       <div class="support-content">
-        <h3>Stacey Pullen</h3>
-        <p>Playing "It's Back" at Movement Detroit</p>
+       <h3>Stacey Pullen</h3>
+<p>Playing "It's Back" at Movement Detroit<br>Playing "Right Now" at Chilitaste Santiago</p>
       </div>
     </article>
 
@@ -571,14 +575,14 @@ videos[0].muted = false;
 videos[0].volume = 1;
 videos[0].play().catch(() => {});
 
-            videos[0].onended = () => {
-                videos[0].style.display = "none";
-                videos[1].style.display = "block";
-               videos[1].currentTime = 0;
-videos[1].muted = false;
-videos[1].volume = 1;
-videos[1].play().catch(() => {});
-            };
+           videos[0].onended = () => {
+    videos[0].style.display = "none";
+    videos[1].style.display = "block";
+    videos[1].currentTime = 0;
+    videos[1].muted = false;
+    videos[1].volume = 1;
+    videos[1].play().catch(() => {});
+};
         }
     }
 
