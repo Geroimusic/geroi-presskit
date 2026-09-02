@@ -1585,3 +1585,7 @@ html {
     }
 
 }
+/* OFFSET PARA MENU FIJO */
+section[id] {
+    scroll-margin-top: 110px;
+}
