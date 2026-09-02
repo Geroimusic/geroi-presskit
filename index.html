@@ -609,26 +609,21 @@ videos[1].play().catch(() => {});
         }
     });
 
-    /* CELULAR / TOUCH: un solo toque */
-    card.addEventListener("click", () => {
+  /* CLICK: activar al primer toque */
+card.addEventListener("click", () => {
+    document.querySelectorAll(".support-photo-card").forEach(otherCard => {
+        if (otherCard !== card) {
+            otherCard.classList.remove("support-active");
 
-        if (window.matchMedia("(hover: hover)").matches) {
-            return;
+            otherCard.querySelectorAll("video").forEach(video => {
+                video.pause();
+                video.currentTime = 0;
+            });
         }
-
-        document.querySelectorAll(".support-photo-card").forEach(otherCard => {
-            if (otherCard !== card) {
-                otherCard.classList.remove("support-active");
-
-                otherCard.querySelectorAll("video").forEach(video => {
-                    video.pause();
-                    video.currentTime = 0;
-                });
-            }
-        });
-
-        playSupport();
     });
+
+    playSupport();
+});
 
 });
 </script>
