@@ -1585,7 +1585,3 @@ html {
     }
 
 }
-/* UNA AL MES - CENTER COVER */
-.more-moments-grid .more-moment:nth-child(3) video {
-    object-position: center center !important;
-}
