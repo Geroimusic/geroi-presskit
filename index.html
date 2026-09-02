@@ -645,6 +645,17 @@ stageVideos.forEach((video) => {
     });
 });
 </script>
+<script>
+document.querySelectorAll("video").forEach((video) => {
+    video.addEventListener("play", () => {
+        document.querySelectorAll("video").forEach((otherVideo) => {
+            if (otherVideo !== video) {
+                otherVideo.pause();
+            }
+        });
+    });
+});
+</script>
 </body>
 </html>
 
