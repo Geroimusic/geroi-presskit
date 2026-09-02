@@ -557,6 +557,8 @@ document.querySelectorAll(".support-photo-card").forEach(card => {
 
         if (videos.length === 1) {
             videos[0].currentTime = 0;
+            videos[0].muted = false;
+videos[0].volume = 1;
             videos[0].play().catch(() => {});
         }
 
@@ -565,13 +567,17 @@ document.querySelectorAll(".support-photo-card").forEach(card => {
             videos[1].style.display = "none";
 
             videos[0].currentTime = 0;
-            videos[0].play().catch(() => {});
+videos[0].muted = false;
+videos[0].volume = 1;
+videos[0].play().catch(() => {});
 
             videos[0].onended = () => {
                 videos[0].style.display = "none";
                 videos[1].style.display = "block";
-                videos[1].currentTime = 0;
-                videos[1].play().catch(() => {});
+               videos[1].currentTime = 0;
+videos[1].muted = false;
+videos[1].volume = 1;
+videos[1].play().catch(() => {});
             };
         }
     }
@@ -627,26 +633,16 @@ document.querySelectorAll(".support-photo-card").forEach(card => {
 });
 </script>
 <script>
-const stageVideos = document.querySelectorAll(".on-stage-video video");
-
-const stageObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        const video = entry.target;
-
-        if (entry.isIntersecting) {
-            video.play().catch(() => {});
-        } else {
-            video.pause();
-        }
-    });
-}, {
-    threshold: 0.25
-});
+const stageVideos = document.querySelectorAll(".on-stage video");
 
 stageVideos.forEach((video) => {
     video.muted = true;
     video.playsInline = true;
-    stageObserver.observe(video);
+
+    video.addEventListener("play", () => {
+        video.muted = false;
+        video.volume = 1;
+    });
 });
 </script>
 </body>
