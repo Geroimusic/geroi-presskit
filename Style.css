@@ -1669,13 +1669,21 @@ body {
 }
 
 .played-at-track .played-at-wall {
-    flex: none;
-    flex-wrap: nowrap;
+    display: flex;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    gap: 22px;
     width: max-content;
+    flex: none;
     margin: 0;
     padding-right: 22px;
+    line-height: 1.2;
 }
 
+.played-at-track .played-at-wall span {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
 @keyframes playedAtMarquee {
     from {
         transform: translateX(0);
@@ -1694,5 +1702,15 @@ body {
 
     .played-at-track {
         animation-duration: 45s;
+    }
+}
+@media (max-width: 600px) {
+    .played-at-track .played-at-wall {
+        gap: 18px;
+        padding-right: 18px;
+    }
+
+    .played-at-track .played-at-wall span {
+        white-space: nowrap;
     }
 }
