@@ -1013,12 +1013,12 @@ html {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
-        background-image:
+    }
+
+    body {
+        background:
             linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0.55)),
-            url("bg.jpg");
-        background-size: cover;
-        background-position: center top;
-        background-attachment: scroll;
+            url("bg.jpg") center top / 100% auto repeat-y !important;
     }
 }
 
@@ -1606,28 +1606,4 @@ section[id] {
 .stacey-right-now-card .support-video {
     object-position: center 70% !important;
 }
-/* FIX FONDO IPHONE */
-@media (max-width: 600px) {
-    body {
-        position: relative;
-        background: #000 !important;
-    }
 
-    body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background:
-            linear-gradient(
-                90deg,
-                rgba(0, 0, 0, 0.8),
-                rgba(0, 0, 0, 0.55)
-            ),
-            url("bg.jpg") center center / cover no-repeat;
-        z-index: -1;
-        pointer-events: none;
-    }
-}
