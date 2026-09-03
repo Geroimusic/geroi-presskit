@@ -1681,7 +1681,7 @@ body {
     flex-wrap: nowrap;
     align-items: center;
     width: max-content;
-    gap: 55px;
+    gap: 80px;
 }
 
 .played-at-row-track span {
@@ -1700,6 +1700,6 @@ body {
     }
 
     .played-at-row-track {
-        gap: 38px;
+        gap: 60px;
     }
 }
