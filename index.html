@@ -699,11 +699,13 @@ document.querySelectorAll('.played-at-row').forEach((row, index) => {
         if (!paused) {
             row.scrollLeft += speed;
 
-            const half = row.scrollWidth / 2;
+          const track = row.querySelector('.played-at-row-track');
+const items = track.querySelectorAll('span');
+const firstDuplicate = items[Math.floor(items.length / 2)];
 
-            if (row.scrollLeft >= half) {
-                row.scrollLeft -= half;
-            }
+if (firstDuplicate && row.scrollLeft >= firstDuplicate.offsetLeft) {
+    row.scrollLeft -= firstDuplicate.offsetLeft;
+}
         }
 
         requestAnimationFrame(autoScroll);
