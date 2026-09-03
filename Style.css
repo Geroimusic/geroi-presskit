@@ -1652,56 +1652,54 @@ body {
         url("bg.jpg");
 }
 /* ==========================================
-   PLAYED AT - AUTO + TOUCH
+/* ==========================================
+   PLAYED AT - 3 ROWS AUTO + TOUCH
 ========================================== */
 
 .played-at-marquee {
     width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
     margin-top: 50px;
     margin-bottom: 90px;
+}
+
+.played-at-row {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
     touch-action: pan-x;
+    margin-bottom: 18px;
 }
 
-.played-at-marquee::-webkit-scrollbar {
+.played-at-row::-webkit-scrollbar {
     display: none;
 }
 
-.played-at-track {
+.played-at-row-track {
     display: flex;
-    width: max-content;
-}
-
-.played-at-track .played-at-wall {
-    display: flex;
-    flex-wrap: nowrap !important;
+    flex-wrap: nowrap;
     align-items: center;
     width: max-content;
-    flex: none;
-    gap: 50px;
-    margin: 0;
-    padding-right: 50px;
-    line-height: 1;
+    gap: 55px;
 }
 
-.played-at-track .played-at-wall span {
-    display: block;
+.played-at-row-track span {
     flex: 0 0 auto;
     white-space: nowrap !important;
 }
 
 @media (max-width: 600px) {
-
     .played-at-marquee {
         margin-top: 30px;
         margin-bottom: 55px;
     }
 
-    .played-at-track .played-at-wall {
+    .played-at-row {
+        margin-bottom: 14px;
+    }
+
+    .played-at-row-track {
         gap: 38px;
-        padding-right: 38px;
     }
 }

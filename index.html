@@ -312,9 +312,9 @@
     </div>
 
     <div class="played-at-marquee">
-    <div class="played-at-track">
 
-        <div class="played-at-wall">
+    <div class="played-at-row played-at-row-1">
+        <div class="played-at-row-track">
             <span class="level-1">CLUB LA FERIA</span>
             <span class="level-1">GROOVE &amp; FLAVOR</span>
             <span class="level-1">BOSQUE LUZ</span>
@@ -323,48 +323,54 @@
             <span class="level-1">UNO AL MES</span>
             <span class="level-1">SENSATION WHITE</span>
 
-            <span class="level-2">TERRAZA BELLAVISTA VALPARAÍSO</span>
-            <span class="level-2">CLUB ROOM</span>
-            <span class="level-2">CLUB SUBTERRÁNEO</span>
-            <span class="level-2">BUDWEISER URBAN NIGHTS</span>
-            <span class="level-2">RADIO REA ARGENTINA</span>
-
-            <span class="level-3">CLUB AMANDA</span>
-            <span class="level-3">TEATRO ALICIA</span>
-            <span class="level-3">SANTO REMEDIO</span>
-            <span class="level-3">MIRAGE</span>
-            <span class="level-3">STUDIO MISTRAL</span>
-            <span class="level-3">CALIFORNIA CANTINA</span>
-            <span class="level-3">MACARENA CLUB</span>
-            <span class="level-3">DJs MEETING</span>
+            <span class="level-1" aria-hidden="true">CLUB LA FERIA</span>
+            <span class="level-1" aria-hidden="true">GROOVE &amp; FLAVOR</span>
+            <span class="level-1" aria-hidden="true">BOSQUE LUZ</span>
+            <span class="level-1" aria-hidden="true">CANDELARIA</span>
+            <span class="level-1" aria-hidden="true">LOS 40 PRINCIPALES</span>
+            <span class="level-1" aria-hidden="true">UNO AL MES</span>
+            <span class="level-1" aria-hidden="true">SENSATION WHITE</span>
         </div>
-
-        <div class="played-at-wall" aria-hidden="true">
-            <span class="level-1">CLUB LA FERIA</span>
-            <span class="level-1">GROOVE &amp; FLAVOR</span>
-            <span class="level-1">BOSQUE LUZ</span>
-            <span class="level-1">CANDELARIA</span>
-            <span class="level-1">LOS 40 PRINCIPALES</span>
-            <span class="level-1">UNO AL MES</span>
-            <span class="level-1">SENSATION WHITE</span>
-
-            <span class="level-2">TERRAZA BELLAVISTA VALPARAÍSO</span>
-            <span class="level-2">CLUB ROOM</span>
-            <span class="level-2">CLUB SUBTERRÁNEO</span>
-            <span class="level-2">BUDWEISER URBAN NIGHTS</span>
-            <span class="level-2">RADIO REA ARGENTINA</span>
-
-            <span class="level-3">CLUB AMANDA</span>
-            <span class="level-3">TEATRO ALICIA</span>
-            <span class="level-3">SANTO REMEDIO</span>
-            <span class="level-3">MIRAGE</span>
-            <span class="level-3">STUDIO MISTRAL</span>
-            <span class="level-3">CALIFORNIA CANTINA</span>
-            <span class="level-3">MACARENA CLUB</span>
-            <span class="level-3">DJs MEETING</span>
-        </div>
-
     </div>
+
+    <div class="played-at-row played-at-row-2">
+        <div class="played-at-row-track">
+            <span class="level-2">TERRAZA BELLAVISTA VALPARAÍSO</span>
+            <span class="level-2">CLUB ROOM</span>
+            <span class="level-2">CLUB SUBTERRÁNEO</span>
+            <span class="level-2">BUDWEISER URBAN NIGHTS</span>
+            <span class="level-2">RADIO REA ARGENTINA</span>
+
+            <span class="level-2" aria-hidden="true">TERRAZA BELLAVISTA VALPARAÍSO</span>
+            <span class="level-2" aria-hidden="true">CLUB ROOM</span>
+            <span class="level-2" aria-hidden="true">CLUB SUBTERRÁNEO</span>
+            <span class="level-2" aria-hidden="true">BUDWEISER URBAN NIGHTS</span>
+            <span class="level-2" aria-hidden="true">RADIO REA ARGENTINA</span>
+        </div>
+    </div>
+
+    <div class="played-at-row played-at-row-3">
+        <div class="played-at-row-track">
+            <span class="level-3">CLUB AMANDA</span>
+            <span class="level-3">TEATRO ALICIA</span>
+            <span class="level-3">SANTO REMEDIO</span>
+            <span class="level-3">MIRAGE</span>
+            <span class="level-3">STUDIO MISTRAL</span>
+            <span class="level-3">CALIFORNIA CANTINA</span>
+            <span class="level-3">MACARENA CLUB</span>
+            <span class="level-3">DJs MEETING</span>
+
+            <span class="level-3" aria-hidden="true">CLUB AMANDA</span>
+            <span class="level-3" aria-hidden="true">TEATRO ALICIA</span>
+            <span class="level-3" aria-hidden="true">SANTO REMEDIO</span>
+            <span class="level-3" aria-hidden="true">MIRAGE</span>
+            <span class="level-3" aria-hidden="true">STUDIO MISTRAL</span>
+            <span class="level-3" aria-hidden="true">CALIFORNIA CANTINA</span>
+            <span class="level-3" aria-hidden="true">MACARENA CLUB</span>
+            <span class="level-3" aria-hidden="true">DJs MEETING</span>
+        </div>
+    </div>
+
 </div>
 
     <div class="live-highlights-title">
@@ -680,6 +686,48 @@ document.querySelectorAll("video").forEach((video) => {
             }
         });
     });
+});
+</script>
+<script>
+document.querySelectorAll('.played-at-row').forEach((row, index) => {
+
+    let paused = false;
+    const speeds = [0.32, 0.25, 0.20];
+    const speed = speeds[index] || 0.25;
+
+    function autoScroll() {
+        if (!paused) {
+            row.scrollLeft += speed;
+
+            const half = row.scrollWidth / 2;
+
+            if (row.scrollLeft >= half) {
+                row.scrollLeft -= half;
+            }
+        }
+
+        requestAnimationFrame(autoScroll);
+    }
+
+    row.addEventListener('touchstart', () => {
+        paused = true;
+    }, { passive: true });
+
+    row.addEventListener('touchend', () => {
+        setTimeout(() => {
+            paused = false;
+        }, 800);
+    }, { passive: true });
+
+    row.addEventListener('mouseenter', () => {
+        paused = true;
+    });
+
+    row.addEventListener('mouseleave', () => {
+        paused = false;
+    });
+
+    autoScroll();
 });
 </script>
 </body>
