@@ -683,5 +683,25 @@ document.querySelectorAll("video").forEach((video) => {
     object-position: center;
     z-index: -1;
     pointer-events: none;
+.page-background {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    z-index: -10 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    filter: brightness(35%) blur(2px);
+}
+
+html,
+body {
+    background-color: transparent !important;
 }
 
