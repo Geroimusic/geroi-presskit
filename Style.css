@@ -1018,7 +1018,7 @@ html {
     body {
         background:
             linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0.55)),
-            url("bg.jpg") center top / 100% 100% no-repeat scroll !important;
+            url("bg.jpg") center top / 100% auto repeat-y !important;
     }
 }
 
