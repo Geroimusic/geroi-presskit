@@ -11,6 +11,7 @@
 </head>
 
 <body>
+  <img src="bg.jpg" class="page-background" alt="">
   <nav class="main-nav">
     <a href="#biography">BIOGRAPHY</a>
     <a href="#supports">SUPPORTS</a>
@@ -664,5 +665,14 @@ document.querySelectorAll("video").forEach((video) => {
 </script>
 </body>
 </html>
-
+.page-background {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+    pointer-events: none;
+}
 
