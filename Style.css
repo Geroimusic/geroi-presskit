@@ -1703,7 +1703,6 @@ body {
         gap: 60px;
     }
 }
-/* EXTRA SPACE AFTER VALPARAISO */
-.played-at-row-2 .level-2 {
-    margin-right: 35px;
+.played-at-row-2 .valparaiso {
+    margin-right: 100px;
 }
