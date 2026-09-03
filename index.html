@@ -690,46 +690,27 @@ document.querySelectorAll("video").forEach((video) => {
 </script>
 <script>
 document.querySelectorAll('.played-at-row').forEach((row, index) => {
-
+    const speeds = [0.7, 0.6, 0.5];
     let paused = false;
-   const speeds = [0.7, 0.6, 0.5];
-    const speed = speeds[index] || 0.25;
 
-    function autoScroll() {
+    function move() {
         if (!paused) {
-            row.scrollLeft += speed;
+            row.scrollLeft += speeds[index];
 
-          const track = row.querySelector('.played-at-row-track');
-const items = track.querySelectorAll('span');
-const firstDuplicate = items[Math.floor(items.length / 2)];
-
-if (firstDuplicate && row.scrollLeft >= firstDuplicate.offsetLeft) {
-    row.scrollLeft -= firstDuplicate.offsetLeft;
-}
+            if (row.scrollLeft >= row.scrollWidth / 2) {
+                row.scrollLeft = 0;
+            }
         }
 
-        requestAnimationFrame(autoScroll);
+        requestAnimationFrame(move);
     }
 
-    row.addEventListener('touchstart', () => {
-        paused = true;
-    }, { passive: true });
-
+    row.addEventListener('touchstart', () => paused = true, { passive: true });
     row.addEventListener('touchend', () => {
-        setTimeout(() => {
-            paused = false;
-        }, 800);
+        setTimeout(() => paused = false, 800);
     }, { passive: true });
 
-    row.addEventListener('mouseenter', () => {
-        paused = true;
-    });
-
-    row.addEventListener('mouseleave', () => {
-        paused = false;
-    });
-
-    autoScroll();
+    move();
 });
 </script>
 </body>
