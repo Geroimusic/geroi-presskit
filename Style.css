@@ -1606,4 +1606,9 @@ section[id] {
 .stacey-right-now-card .support-video {
     object-position: center 70% !important;
 }
-
+@media (max-width: 600px) {
+    h1 {
+        font-size: 58px !important;
+        letter-spacing: 14px !important;
+    }
+}
