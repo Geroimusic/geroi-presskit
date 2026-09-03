@@ -1706,3 +1706,15 @@ body {
 .played-at-row-2 .valparaiso {
     margin-right: 100px;
 }
+/* BACKGROUND DESKTOP FINAL */
+@media (min-width: 601px) {
+    body {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0,0,0,0.72),
+                rgba(0,0,0,0.58)
+            ),
+            url("bg.jpg") center center / cover fixed no-repeat !important;
+    }
+}
