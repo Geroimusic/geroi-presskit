@@ -720,6 +720,48 @@ document.querySelectorAll("video").forEach((video) => {
 }
 
 html,
+<script>
+const marquee = document.querySelector('.played-at-marquee');
+
+if (marquee) {
+    let paused = false;
+    const speed = 0.35;
+
+    function moveMarquee() {
+        if (!paused) {
+            marquee.scrollLeft += speed;
+
+            const half = marquee.scrollWidth / 2;
+
+            if (marquee.scrollLeft >= half) {
+                marquee.scrollLeft -= half;
+            }
+        }
+
+        requestAnimationFrame(moveMarquee);
+    }
+
+    marquee.addEventListener('touchstart', () => {
+        paused = true;
+    }, { passive: true });
+
+    marquee.addEventListener('touchend', () => {
+        setTimeout(() => {
+            paused = false;
+        }, 800);
+    }, { passive: true });
+
+    marquee.addEventListener('mouseenter', () => {
+        paused = true;
+    });
+
+    marquee.addEventListener('mouseleave', () => {
+        paused = false;
+    });
+
+    moveMarquee();
+}
+</script>
 body {
     background-color: transparent !important;
 }

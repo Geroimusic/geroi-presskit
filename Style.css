@@ -1652,65 +1652,56 @@ body {
         url("bg.jpg");
 }
 /* ==========================================
-   PLAYED AT - MOVIMIENTO HORIZONTAL
+   PLAYED AT - AUTO + TOUCH
 ========================================== */
 
 .played-at-marquee {
     width: 100%;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     margin-top: 50px;
     margin-bottom: 90px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+}
+
+.played-at-marquee::-webkit-scrollbar {
+    display: none;
 }
 
 .played-at-track {
     display: flex;
     width: max-content;
-    animation: playedAtMarquee 55s linear infinite;
 }
 
 .played-at-track .played-at-wall {
     display: flex;
     flex-wrap: nowrap !important;
     align-items: center;
-    gap: 22px;
     width: max-content;
     flex: none;
+    gap: 50px;
     margin: 0;
-    padding-right: 22px;
-    line-height: 1.2;
+    padding-right: 50px;
+    line-height: 1;
 }
 
 .played-at-track .played-at-wall span {
+    display: block;
     flex: 0 0 auto;
-    white-space: nowrap;
-}
-@keyframes playedAtMarquee {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
+    white-space: nowrap !important;
 }
 
 @media (max-width: 600px) {
+
     .played-at-marquee {
         margin-top: 30px;
         margin-bottom: 55px;
     }
 
-    .played-at-track {
-        animation-duration: 45s;
-    }
-}
-@media (max-width: 600px) {
     .played-at-track .played-at-wall {
-        gap: 18px;
-        padding-right: 18px;
-    }
-
-    .played-at-track .played-at-wall span {
-        white-space: nowrap;
+        gap: 38px;
+        padding-right: 38px;
     }
 }
