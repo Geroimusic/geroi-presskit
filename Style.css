@@ -1625,7 +1625,7 @@ section[id] {
             linear-gradient(
                 90deg,
                 rgba(0,0,0,0.80),
-                rgba(0,0,0,0.55)
+                rgba(0,0,0,0.72)
             ),
             url("bg.jpg");
 
@@ -1635,5 +1635,64 @@ section[id] {
 
         z-index: -1;
         pointer-events: none;
+    }
+}
+/* ==========================================
+   BACKGROUND DARKNESS FINAL
+========================================== */
+
+body {
+    background-image:
+        linear-gradient(rgba(0,0,0,.38), rgba(0,0,0,.38)),
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.8),
+            rgba(0,0,0,.55)
+        ),
+        url("bg.jpg");
+}
+/* ==========================================
+   PLAYED AT - MOVIMIENTO HORIZONTAL
+========================================== */
+
+.played-at-marquee {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 50px;
+    margin-bottom: 90px;
+}
+
+.played-at-track {
+    display: flex;
+    width: max-content;
+    animation: playedAtMarquee 55s linear infinite;
+}
+
+.played-at-track .played-at-wall {
+    flex: none;
+    flex-wrap: nowrap;
+    width: max-content;
+    margin: 0;
+    padding-right: 22px;
+}
+
+@keyframes playedAtMarquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 600px) {
+    .played-at-marquee {
+        margin-top: 30px;
+        margin-bottom: 55px;
+    }
+
+    .played-at-track {
+        animation-duration: 45s;
     }
 }
