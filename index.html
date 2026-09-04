@@ -713,5 +713,24 @@ document.querySelectorAll('.played-at-row').forEach((row, index) => {
     move();
 });
 </script>
+<script>
+const supportsSection = document.querySelector('#supports');
+
+if (supportsSection) {
+    const supportsObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+                supportsSection.querySelectorAll('video').forEach((video) => {
+                    video.pause();
+                });
+            }
+        });
+    }, {
+        threshold: 0
+    });
+
+    supportsObserver.observe(supportsSection);
+}
+</script>
 </body>
 </html>
