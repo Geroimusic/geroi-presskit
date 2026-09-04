@@ -715,22 +715,19 @@ document.querySelectorAll('.played-at-row').forEach((row, index) => {
 </script>
 <script>
 const supportsSection = document.querySelector('#supports');
+const listenNumber = document.querySelector('.music-section .section-number');
 
-if (supportsSection) {
-    const supportsObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (!entry.isIntersecting) {
-                supportsSection.querySelectorAll('video').forEach((video) => {
-                    video.pause();
-                });
-            }
+window.addEventListener('scroll', () => {
+    if (!supportsSection || !listenNumber) return;
+
+    const position = listenNumber.getBoundingClientRect();
+
+    if (position.top <= window.innerHeight) {
+        supportsSection.querySelectorAll('video').forEach((video) => {
+            video.pause();
         });
-    }, {
-        threshold: 0
-    });
-
-    supportsObserver.observe(supportsSection);
-}
+    }
+}, { passive: true });
 </script>
 </body>
 </html>
